@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="views.RestaurantsListController">
+   <children>
+        <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>   
+                <AnchorPane prefHeight="300.0" prefWidth="400.0">
+                    <children>
+                        <TableView fx:id="restaurantsTable" prefHeight="300.0" prefWidth="400.0" layoutX="15.0" layoutY="15.0">
+                            <columns>
+                                <TableColumn fx:id="restaurantIdColumn" prefWidth="15.0" text="Id" />
+                                <TableColumn fx:id="restaurantNameColumn" prefWidth="175.0" text="Name" />
+                                <TableColumn fx:id="locationColumn" prefWidth="100.0" text="Location" />
+                            </columns>
+                        </TableView>
+                        <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                            <buttons>
+                                <Button  prefWidth="150.0" mnemonicParsing="false" onAction="#handleAddRestaurant" text="Add Restaurant" />
+                                <Button mnemonicParsing="false" onAction="#handleAddReview" text="Add Review" />
+                            </buttons>
+                        </ButtonBar>				        
+                    </children>	
+                </AnchorPane>
+                <AnchorPane prefHeight="300.0" prefWidth="300.0">
+                    <children>
+                        <TableView fx:id="reviewsTable" prefHeight="300.0" prefWidth="300.0" layoutX="15.0" layoutY="15.0">
+                            <columns>
+                                <TableColumn fx:id="reviewerColumn" prefWidth="15.0" text="Reviewer" />
+                                <TableColumn fx:id="ratingColumn" prefWidth="175.0" text="Rating" />
+                            </columns>
+                        </TableView>
+                    </children>	
+                </AnchorPane>
+            </items>
+        </SplitPane>		
+  </children>
+</AnchorPane>
